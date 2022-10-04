@@ -5,7 +5,6 @@
 // IMPORTS
 //
 
-@import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
@@ -15,9 +14,8 @@
 
 body,
 html {
-    color: #373737;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
+    color: $darkGray;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -28,7 +26,7 @@ html {
 }
 
 body {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 * {
@@ -52,7 +50,7 @@ h1,
 h2,
 h3,
 dt {
-    color: #121212;
+    color: $darkerGray;
     font-weight: 200;
 }
 
@@ -65,14 +63,23 @@ dl {
     font-weight: 400;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    max-width: 640px;
+}
+
 header {
-    background: #c4e3ff;
-    border-bottom: 8px solid #2c88ff;
+    background: $paleBlue;
+    border-bottom: 8px solid $blue;
     padding: 12px 0;
     width: 100%;
 }
 
-header .center {
+header .center-content {
     display: flex;
 }
 
@@ -85,17 +92,22 @@ header .icon img {
     width: 100%;
 }
 
-header h1 {
-    transform: translateY(-6px);
+header a {
+    color: $mediumBlue;
 }
 
 h1 a {
-    font-size: 66%;
-    font-weight: 200;
+    color: $darkerGray;
+    text-decoration: none;
 }
 
-header a {
-    color: #121212;
+h1 a:hover {
+    text-decoration: underline;
+}
+
+h1 a + a {
+    font-size: 66%;
+    font-weight: 200;
 }
 
 header a,
@@ -105,11 +117,16 @@ header span {
 }
 
 main {
+    margin-top: 48px;
     padding-bottom: 48px;
     position: relative;
 }
 
-.center {
+.latest {
+    margin-bottom: 24px;
+}
+
+.center-content {
     margin: 0 auto;
     max-width: 1200px;
     width: 90%;
@@ -132,6 +149,10 @@ main {
     width: 100%;
 }
 
+footer {
+    padding-bottom: 48px;
+}
+
 @media (max-width: 640px) {
     header .icon {
         display: none;
@@ -148,5 +169,8 @@ main {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "button";
+@import "card";
+@import "grid";
 @import "highlights";
 @import "svg-icons";

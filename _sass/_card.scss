@@ -1,0 +1,29 @@
+.card {
+    position: relative;
+    box-shadow: none;
+    border-radius: 0.2em;
+    border: 1px solid $mildGray;
+    overflow: hidden;
+    text-align: left;
+    background: #fff;
+    margin-bottom: 0.6em;
+    padding: 0;
+    transition: all .3s ease;
+}
+
+.card header {
+    border-bottom: 1px solid $mildGray;
+    font-weight: bold;
+    padding: 16px;
+    position: relative;
+}
+
+.card .body {
+    padding: 16px;
+}
+
+.card footer {
+    display: flex;
+    padding: 16px;
+    justify-content: flex-end;
+}
